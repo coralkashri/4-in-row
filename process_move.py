@@ -11,12 +11,12 @@ def load_board():
     for line in lines:
         if any(x in line for x in ["⚪", "🔴", "🟡"]):
                before_board = False
-               board.insert(line.strip().split())
+               board.append(line.strip().split())
         else:
             if before_board:
-                lines_before.insert(line)
+                lines_before.append(line)
             else:
-                lines_after.insert(line)
+                lines_after.append(line)
     return (board, lines_before, lines_after)
 
 def save_board(board, lines_before, lines_after):
