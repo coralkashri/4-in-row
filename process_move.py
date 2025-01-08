@@ -7,10 +7,10 @@ def load_board():
     lines_before = []
     lines_after = []
     
-    before_bourd = True
+    before_board = True
     for line in lines:
         if any(x in line for x in ["⚪", "🔴", "🟡"]):
-               before_bpard = False
+               before_board = False
                board.insert(line.strip().split())
         else:
             if before_board:
