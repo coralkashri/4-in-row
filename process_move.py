@@ -6,6 +6,7 @@ def load_board():
     # Extract board lines
     lines_before = []
     lines_after = []
+    board = []
     
     before_board = True
     for line in lines:
