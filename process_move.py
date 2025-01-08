@@ -9,9 +9,7 @@ def load_board():
     
     before_bourd = True
     for line in lines:
-        if "⚪" in line or
-           "🔴" in line or
-           "🟡" in line:
+        if ["⚪", "🔴", "🟡"] in line:
                before_bpard = False
                board.insert(line.strip().split())
         else:
