@@ -26,7 +26,7 @@ def save_board(board, lines_before, lines_after):
             f.write(line)
         #f.write("1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣\n")
         for row in board:
-            f.write(" ".join(row) + "\n")
+            f.write(" ".join(row) + "\n\n")
         for line in lines_after:
             f.write(line)
 
