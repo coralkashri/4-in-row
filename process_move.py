@@ -39,11 +39,11 @@ def drop_piece(board, column, piece):
 
 if __name__ == "__main__":
     comment = sys.argv[1]
-    user = sys.argv[2]
+    user = int(sys.argv[2]) % 2
 
     (board, before, after) = load_board()
     column = int(comment.split()[1]) - 1  # Parse `drop X` input
-    piece = "🔴" if user == "player1" else "🟡"
+    piece = "🔴" if user == 1 else "🟡"
 
     if not drop_piece(board, column, piece):
         print("Column full. Move invalid.")
