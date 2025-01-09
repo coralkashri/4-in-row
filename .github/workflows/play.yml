@@ -23,7 +23,7 @@ jobs:
 
       - name: Process move
         run: |
-          python process_move.py "${{ github.event.comment.body }}" "${{ github.event.comment.user.login }}"
+          python process_move.py "${{ github.event.comment.body }}" "${{ github.event.comment.id }}"
 
       - name: Commit and push changes
         run: |
