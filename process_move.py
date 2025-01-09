@@ -10,7 +10,7 @@ def load_board():
     
     before_board = True
     for line in lines:
-        if any(x in line for x in ["⚪", "🔴", "🟡"]):
+        if any(x in line for x in ["⚪", "🔴", "🟡"]) and "Player" not in line:
                before_board = False
                board.append(line.strip().split())
         else:
